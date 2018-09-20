@@ -4,12 +4,11 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Default Filesystem Disk
+    | 默认文件系统磁盘
     |--------------------------------------------------------------------------
     |
-    | Here you may specify the default filesystem disk that should be used
-    | by the framework. The "local" disk, as well as a variety of cloud
-    | based disks are available to your application. Just store away!
+    | 在这里，您可以指定框架应使用的默认文件系统磁盘。
+    | 您可以使用“本地”磁盘以及各种基于云的磁盘。 只需存放！
     |
     */
 
@@ -62,6 +61,12 @@ return [
             'region' => env('AWS_DEFAULT_REGION'),
             'bucket' => env('AWS_BUCKET'),
             'url' => env('AWS_URL'),
+        ],
+        'admin' => [
+            'driver'     => 'local',
+            'root'       => public_path('upload'),
+            'visibility' => 'public',
+            'url' => env('APP_URL').'/upload/',
         ],
 
     ],

@@ -5,12 +5,12 @@ return [
     /*
      * Laravel-admin name.
      */
-    'name' => 'Laravel-admin',
+    'name' => '观岭',
 
     /*
      * Logo in admin panel header.
      */
-    'logo' => '<b>Laravel</b> admin',
+    'logo' => '<b>Lang</b>',
 
     /*
      * Mini-logo in admin panel header.
@@ -30,14 +30,14 @@ return [
     ],
 
     /*
-     * Laravel-admin install directory.
+     * Laravel-admin install directory.安装目录。
      */
     'directory' => app_path('Admin'),
 
     /*
      * Laravel-admin html title.
      */
-    'title' => 'Admin',
+    'title' => '金堂蓝光和骏观岭运动休闲有限公司',
 
     /*
      * Use `https`.
@@ -82,9 +82,10 @@ return [
     'database' => [
 
         // Database connection for following tables.
+        //以下表的数据库连接。
         'connection' => '',
 
-        // User tables and model.
+        // 用户表和模型。
         'users_table' => 'admin_users',
         'users_model' => Encore\Admin\Auth\Database\Administrator::class,
 
@@ -100,7 +101,7 @@ return [
         'menu_table' => 'admin_menu',
         'menu_model' => Encore\Admin\Auth\Database\Menu::class,
 
-        // Pivot table for table above.
+        // 上面的表的数据透视表.
         'operation_log_table'    => 'admin_operation_log',
         'user_permissions_table' => 'admin_user_permissions',
         'role_users_table'       => 'admin_role_users',
@@ -109,14 +110,14 @@ return [
     ],
 
     /*
-     * By setting this option to open or close operation log in laravel-admin.
+     * 通过将此选项设置为打开或关闭操作登录 laravel-admin.
      */
     'operation_log' => [
 
         'enable' => true,
 
         /*
-         * Routes that will not log to database.
+         * 不会记录到数据库的路由.
          *
          * All method to path like: admin/auth/logs
          * or specific method to path like: get:admin/auth/logs
@@ -143,17 +144,17 @@ return [
     'layout' => ['sidebar-mini', 'sidebar-collapse'],
 
     /*
-     * Background image in login page
+     * 登录页面中的背景图像
      */
-    'login_background_image' => '',
+    'login_background_image' => '/21.jpg',
 
     /*
-     * Version displayed in footer.
+     * 版本显示在页脚中.
      */
-    'version' => '1.5.x-dev',
+    'version' => '开发版 1.0',
 
     /*
-     * Settings for extensions.
+     * 扩展程序的设置。
      */
     'extensions' => [
 
