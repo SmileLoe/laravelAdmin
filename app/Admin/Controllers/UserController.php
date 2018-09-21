@@ -10,6 +10,7 @@ use Encore\Admin\Facades\Admin;
 use Encore\Admin\Layout\Content;
 use App\Http\Controllers\Controller;
 use Encore\Admin\Controllers\ModelForm;
+use Encore\Admin\Auth\Permission;
 
 class UserController extends Controller
 {
@@ -22,6 +23,8 @@ class UserController extends Controller
      */
     public function index()
     {
+        // 检查权限，有users权限的用户或者角色可以访问创建文章页面
+        Permission::check('users');
         return Admin::content(function (Content $content) {
 
             $content->header('前台用户');
@@ -55,6 +58,8 @@ class UserController extends Controller
      */
     public function create()
     {
+
+
         return Admin::content(function (Content $content) {
 
             $content->header('header');
